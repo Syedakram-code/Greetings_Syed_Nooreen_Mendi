@@ -1,0 +1,88 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #ff9a9e, #fad0c4);
+    text-align: center;
+    color: #fff;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .container {
+    margin-top: 20vh;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    animation: fadeIn 3s ease-in-out;
+  }
+  
+  p {
+    font-size: 1.2rem;
+    margin: 20px 0;
+    animation: fadeIn 4s ease-in-out;
+  }
+  
+  .heart {
+    width: 100px;
+    height: 100px;
+    background: red;
+    position: relative;
+    margin: 50px auto;
+    animation: heartbeat 1.5s infinite ease-in-out;
+    transform: rotate(-45deg);
+  }
+  
+  .heart::before,
+  .heart::after {
+    content: "";
+    width: 100px;
+    height: 100px;
+    background: red;
+    border-radius: 50%;
+    position: absolute;
+  }
+  
+  .heart::before {
+    top: -50px;
+    left: 0;
+  }
+  
+  .heart::after {
+    top: 0;
+    left: 50px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #ff6f61;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: 0.3s;
+  }
+  
+  button:hover {
+    background-color: #ff3b2d;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes heartbeat {
+    0%, 100% {
+      transform: scale(1) rotate(-45deg);
+    }
+    50% {
+      transform: scale(1.2) rotate(-45deg);
+    }
+  }
+  
